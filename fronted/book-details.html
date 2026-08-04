@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Details | বইঘর</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/book-details.css">
+
+</head>
+
+<body>
+
+    <!-- ================= Header ================= -->
+
+    <header>
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a href="index.html" class="logo">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>বইঘর</span>
+
+                </a>
+
+                <ul>
+
+                    <li><a href="index.html">হোম</a></li>
+
+                    <li><a href="books.html">বইসমূহ</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= Book Details ================= -->
+
+    <section class="details">
+
+        <div class="container details-grid">
+
+            <!-- Left -->
+
+            <div class="book-image">
+
+                <img src="" alt="Book Image">
+
+            </div>
+
+
+            <!-- Right -->
+
+            <div class="book-info">
+
+                <span class="category">
+
+                    Programming
+
+                </span>
+
+                <h1>
+
+                    Book Name
+
+                </h1>
+
+                <h3>
+
+                    Author Name
+
+                </h3>
+
+                <div class="rating">
+
+                    ⭐⭐⭐⭐⭐
+
+                    <span>
+
+                        0 Rating
+
+                    </span>
+
+                </div>
+
+                <p>
+
+                    Description...
+
+                </p>
+
+                <div class="book-meta">
+
+                    <div>
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Language
+
+                        <b>English</b>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-file"></i>
+
+                        Pages
+
+                        <b>464</b>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        Published
+
+                        <b>2008</b>
+
+                    </div>
+
+                </div>
+
+                <button class="review-btn">
+
+                    ✍️ Review লিখুন
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= Reviews ================= -->
+
+    <section class="reviews">
+
+        <div class="container">
+
+            <h2>
+
+                User Reviews
+
+            </h2>
+
+            <!-- এখানেই Backend থেকে Review আসবে -->
+
+            <div id="reviews-container">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= Add Review ================= -->
+
+<section class="add-review">
+
+    <div class="container">
+
+        <h2>আপনার রিভিউ লিখুন</h2>
+
+        <form id="review-form">
+
+            <input
+                id="reviewer"
+                type="text"
+                placeholder="আপনার নাম"
+                required>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="আপনার ইমেইল"
+                required>
+
+            <select id="rating" required>
+
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐☆</option>
+                <option value="3">⭐⭐⭐☆☆</option>
+                <option value="2">⭐⭐☆☆☆</option>
+                <option value="1">⭐☆☆☆☆</option>
+
+            </select>
+
+            <textarea
+                id="comment"
+                rows="6"
+                placeholder="আপনার মতামত লিখুন..."
+                required></textarea>
+
+            <button type="submit">
+
+                Submit Review
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+    <!-- JS -->
+
+    <script src="assets/js/book-details.js"></script>
+
+</body>
+
+</html>

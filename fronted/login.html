@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>লগইন | বইঘর</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <img
+        src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80">
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <div class="login-card">
+
+            <h1>📚 বইঘর</h1>
+
+            <p>আপনার অ্যাকাউন্টে লগইন করুন</p>
+
+            <form id="loginForm">
+
+                <label>ইমেইল</label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="example@gmail.com"
+                    required>
+
+                <label>পাসওয়ার্ড</label>
+
+                <div class="password-box">
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="********"
+                        required>
+
+                    <i
+                        id="togglePassword"
+                        class="fa-solid fa-eye"></i>
+
+                </div>
+
+                <div class="options">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <button type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <p class="register-link">
+
+                Account নেই?
+
+                <a href="register.html">
+
+                    Register
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="assets/js/login.js"></script>
+
+</body>
+
+</html>

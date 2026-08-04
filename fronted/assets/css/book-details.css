@@ -1,0 +1,384 @@
+/* ==========================
+RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#4f46e5;
+    --primary-dark:#4338ca;
+    --text:#0f172a;
+    --light:#64748b;
+    --bg:#f8fafc;
+    --white:#fff;
+    --border:#e2e8f0;
+
+}
+
+body{
+
+    font-family:'Hind Siliguri',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/* ==========================
+HEADER
+========================== */
+
+header{
+
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:999;
+    border-bottom:1px solid var(--border);
+
+}
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:28px;
+    font-weight:700;
+    color:var(--text);
+
+}
+
+.logo i{
+
+    color:var(--primary);
+
+}
+
+.navbar ul{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:#64748b;
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ==========================
+DETAILS
+========================== */
+
+.details{
+
+    padding:80px 0;
+
+}
+
+.details-grid{
+
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:60px;
+    align-items:center;
+
+}
+
+.book-image img{
+
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.category{
+
+    display:inline-block;
+    background:#eef2ff;
+    color:var(--primary);
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+
+}
+
+.book-info h1{
+
+    font-size:48px;
+    margin-bottom:10px;
+
+}
+
+.book-info h3{
+
+    color:#64748b;
+    margin-bottom:20px;
+
+}
+
+.rating{
+
+    font-size:22px;
+    margin-bottom:25px;
+
+}
+
+.rating span{
+
+    color:#64748b;
+    margin-left:10px;
+
+}
+
+.book-info p{
+
+    color:#64748b;
+    line-height:1.9;
+    margin-bottom:35px;
+
+}
+
+.book-meta{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:35px;
+
+}
+
+.book-meta div{
+
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.book-meta i{
+
+    color:var(--primary);
+    margin-right:8px;
+
+}
+
+.review-btn{
+
+    padding:16px 30px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+.review-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================
+REVIEWS
+========================== */
+
+.reviews{
+
+    padding:80px 0;
+
+}
+
+.reviews h2{
+
+    margin-bottom:35px;
+    font-size:34px;
+
+}
+
+.review-card{
+
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+}
+
+.review-card img{
+
+    width:70px;
+    height:70px;
+    border-radius:50%;
+
+}
+
+.review-card p{
+
+    margin-top:10px;
+    color:#64748b;
+    line-height:1.7;
+
+}
+
+/* ==========================
+FORM
+========================== */
+
+.add-review{
+
+    padding:80px 0;
+
+}
+
+.add-review h2{
+
+    margin-bottom:30px;
+    font-size:34px;
+
+}
+
+form{
+
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    font-family:inherit;
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+form button{
+
+    width:100%;
+    padding:18px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:17px;
+
+}
+
+form button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.details-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.book-meta{
+
+grid-template-columns:1fr;
+
+}
+
+.navbar{
+
+flex-direction:column;
+height:auto;
+padding:20px 0;
+
+}
+
+.navbar ul{
+
+margin-top:20px;
+
+}
+
+.review-card{
+
+flex-direction:column;
+
+}
+
+}

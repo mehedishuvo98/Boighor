@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>সব বই | বইঘর</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/books.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a href="index.html" class="logo">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>বইঘর</span>
+
+                </a>
+
+                <ul>
+
+                    <li><a href="index.html">হোম</a></li>
+
+                    <li><a class="active" href="books.html">বইসমূহ</a></li>
+
+                    
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>📚 আমাদের সকল বই</h1>
+
+            <p>
+
+                সকল বই এখানে দেখানো হচ্ছে।
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="বইয়ের নাম, লেখক বা ক্যাটাগরি লিখুন...">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORY FILTER ================= -->
+
+    <section class="filter-section">
+
+        <div class="container">
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-btn active"
+                    data-category="All">
+
+                    All
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Programming">
+
+                    Programming
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Novel">
+
+                    Novel
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Self Help">
+
+                    Self Help
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="History">
+
+                    History
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKS ================= -->
+
+    <section class="books">
+
+        <div class="container">
+
+            <div id="books-container">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JS ================= -->
+
+    <script src="assets/js/books.js"></script>
+
+</body>
+
+</html>

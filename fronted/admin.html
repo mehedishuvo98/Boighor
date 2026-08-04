@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | বইঘর</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+</head>
+
+<body>
+
+<!-- ===================================== -->
+<!-- Admin Protection -->
+<!-- ===================================== -->
+
+<script>
+
+const currentUser = JSON.parse(localStorage.getItem("user"));
+
+if (!currentUser) {
+
+    alert("প্রথমে লগইন করুন।");
+
+    window.location.href = "login.html";
+
+}
+
+else if (currentUser.role !== "admin") {
+
+    alert("শুধুমাত্র Admin এই পেজে প্রবেশ করতে পারবেন।");
+
+    window.location.href = "index.html";
+
+}
+
+</script>
+
+<!-- ===================================== -->
+<!-- Header -->
+<!-- ===================================== -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            📚 বইঘর Admin
+
+        </div>
+
+        <div>
+
+            <span style="margin-right:20px;font-weight:bold;">
+
+                👤 <span id="adminName"></span>
+
+            </span>
+
+            <a href="index.html">
+
+                ← Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===================================== -->
+<!-- Dashboard -->
+<!-- ===================================== -->
+
+<section class="dashboard">
+
+    <div class="container">
+
+        <div class="top-bar">
+
+            <h1>
+
+                📚 সকল বই
+
+            </h1>
+
+            <button id="addBookBtn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                নতুন বই যোগ করুন
+
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Image</th>
+
+                    <th>Title</th>
+
+                    <th>Author</th>
+
+                    <th>Category</th>
+
+                    <th>Rating</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="bookTable">
+
+                <!-- JS থেকে Data আসবে -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- Add/Edit Modal -->
+<!-- ===================================== -->
+
+<div id="bookModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2 id="modalTitle">
+
+            নতুন বই যোগ করুন
+
+        </h2>
+
+        <form id="bookForm">
+
+            <input
+                type="hidden"
+                id="bookId">
+
+            <input
+                id="title"
+                type="text"
+                placeholder="Book Title"
+                required>
+
+            <input
+                id="author"
+                type="text"
+                placeholder="Author"
+                required>
+
+            <input
+                id="category"
+                type="text"
+                placeholder="Category"
+                required>
+
+            <input
+                id="rating"
+                type="number"
+                step="0.1"
+                min="0"
+                max="5"
+                placeholder="Rating"
+                required>
+
+            <input
+                id="image"
+                type="text"
+                placeholder="Image URL"
+                required>
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Description"
+                required></textarea>
+
+            <div class="modal-buttons">
+
+                <button type="submit">
+
+                    Save
+
+                </button>
+
+                <button
+                    type="button"
+                    id="closeModal">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+// Admin Name Show
+
+const adminName = document.getElementById("adminName");
+
+if (currentUser) {
+
+    adminName.innerText = currentUser.name;
+
+}
+
+</script>
+
+<script src="assets/js/admin.js"></script>
+
+</body>
+
+</html>

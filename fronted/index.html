@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>বইঘর | Book Review Management System</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>বইঘর</span>
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">হোম</a>
+                </li>
+
+                <li>
+                    <a href="books.html">বইসমূহ</a>
+                </li>
+
+                <li>
+                    <a href="#categories">ক্যাটাগরি</a>
+                </li>
+
+                <li>
+                    <a href="#reviews">রিভিউ</a>
+                </li>
+
+                <li>
+                    <a href="#contact">যোগাযোগ</a>
+                </li>
+
+            </ul>
+
+            
+            <div class="nav-buttons" id="nav-buttons">
+
+                <!-- Login -->
+                <a
+                    href="login.html"
+                    id="loginBtn"
+                    class="login-btn">
+
+                    লগইন
+
+                </a>
+
+                <!-- Register -->
+                <a
+                    href="register.html"
+                    id="registerBtn"
+                    class="register-btn">
+
+                    নিবন্ধন
+
+                </a>
+
+                <!-- User Name -->
+                <span
+                    id="userName"
+                    style="
+                        display:none;
+                        font-weight:700;
+                        margin-right:15px;
+                    ">
+
+                </span>
+
+                <!-- Admin Button -->
+                <a
+                    href="admin.html"
+                    id="adminBtn"
+                    class="register-btn"
+                    style="display:none;">
+
+                    Admin
+
+                </a>
+
+                <!-- Logout -->
+                <button
+                    id="logoutBtn"
+                    style="
+                        display:none;
+                        padding:10px 18px;
+                        background:#ef4444;
+                        color:white;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;
+                        font-family:'Hind Siliguri',sans-serif;
+                    ">
+
+                    লগআউট
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="container hero-container">
+
+            <div class="hero-left">
+
+                <span class="badge">
+
+                    ⭐ বাংলাদেশের সেরা বই রিভিউ প্ল্যাটফর্ম
+
+                </span>
+
+                <h1>
+
+                    আপনার পরবর্তী
+
+                    <span>প্রিয় বই</span>
+
+                    খুঁজে নিন
+
+                </h1>
+
+                <p>
+
+                    হাজারো বই পড়ুন, রিভিউ লিখুন, নতুন বই আবিষ্কার করুন
+                    এবং অন্য পাঠকদের মতামত জানুন।
+
+                </p>
+
+                <div class="hero-btns">
+
+                    <a href="books.html" class="btn-primary">
+
+                        📖 বই দেখুন
+
+                    </a>
+
+                    <a href="#" class="btn-outline">
+
+                        আরও জানুন
+
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+
+                        <h2>১০,০০০+</h2>
+
+                        <span>রিভিউ</span>
+
+                    </div>
+
+                    <div>
+
+                        <h2>৫,০০০+</h2>
+
+                        <span>বই</span>
+
+                    </div>
+
+                    <div>
+
+                        <h2>৩,০০০+</h2>
+
+                        <span>ব্যবহারকারী</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="image-box">
+
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80"
+                        alt="Books">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURED BOOKS ================= -->
+
+    <section class="featured">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>📚 জনপ্রিয় বইসমূহ</h2>
+
+            <p>এই সপ্তাহের সবচেয়ে জনপ্রিয় বইগুলো দেখুন</p>
+
+        </div>
+
+        <div
+            class="book-grid"
+            id="featuredBooks">
+
+            <h3>Loading Books...</h3>
+
+        </div>
+
+    
+    </div>
+
+</section>
+
+    <!-- ================= Categories ================= -->
+
+    <section class="categories" id="categories">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>📚 বইয়ের ক্যাটাগরি</h2>
+
+                <p>আপনার পছন্দের বিষয় নির্বাচন করুন</p>
+
+            </div>
+
+            <div class="category-grid">
+
+                <div class="category-card">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <h3>প্রোগ্রামিং</h3>
+
+                </div>
+
+                <div class="category-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h3>সেলফ ডিপ্লোমেন্ট</h3>
+
+                </div>
+
+                <div class="category-card">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <h3>নোবেল</h3>
+
+                </div>
+
+                <div class="category-card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h3>ইডুকেশন</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Reviews ================= -->
+
+    <section class="reviews" id="reviews">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>⭐ সাম্প্রতিক রিভিউ</h2>
+
+        </div>
+
+        <div
+            class="review-grid"
+            id="latestReviews">
+
+            <h3>Loading Reviews...</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ================= Newsletter ================= -->
+
+    <section class="newsletter" id="contact">
+
+        <div class="container">
+
+            <h2>নতুন বই সম্পর্কে জানতে সাবস্ক্রাইব করুন</h2>
+
+            <div class="newsletter-box">
+
+                <input
+                    type="email"
+                    placeholder="আপনার ইমেইল">
+
+                <button>
+
+                    সাবস্ক্রাইব
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Footer ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <h2>📚 বইঘর</h2>
+
+            <p>বাংলাদেশের আধুনিক Book Review Platform</p>
+
+            <small>© 2026 All Rights Reserved.</small>
+
+        </div>
+
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
