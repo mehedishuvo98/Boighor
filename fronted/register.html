@@ -4,127 +4,399 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>রেজিস্ট্রেশন | বইঘর</title>
 
+    <!-- Google Font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+
+    <!-- Font Awesome -->
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/register.css">
+
+    <!-- Register CSS -->
+
+    <link rel="stylesheet"
+        href="assets/css/register.css">
 
 </head>
 
+
 <body>
 
-<div class="register-container">
 
-    <!-- Left Image -->
+    <!-- Main Container -->
 
-    <div class="left">
+    <div class="register-container">
 
-        <img
-            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80"
-            alt="Books">
 
-    </div>
+        <!-- Left Image -->
 
-    <!-- Right Form -->
+        <div class="left">
 
-    <div class="right">
+            <img
+                src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80"
+                alt="Books">
 
-        <div class="register-card">
+        </div>
 
-            <h1>📚 বইঘর</h1>
 
-            <p>নতুন অ্যাকাউন্ট তৈরি করুন</p>
+        <!-- Right Form -->
 
-            <form id="registerForm">
+        <div class="right">
 
-                <!-- Name -->
+            <div class="register-card">
 
-                <label>পূর্ণ নাম</label>
 
-                <input
-                    id="name"
-                    type="text"
-                    placeholder="আপনার নাম"
-                    required>
+                <!-- Logo -->
 
-                <!-- Email -->
+                <h1>📚 বইঘর</h1>
 
-                <label>ইমেইল</label>
+                <p class="subtitle">
+                    নতুন অ্যাকাউন্ট তৈরি করুন
+                </p>
 
-                <input
-                    id="email"
-                    type="email"
-                    placeholder="example@gmail.com"
-                    required>
 
-                <!-- Password -->
+                <!-- Registration Form -->
 
-                <label>পাসওয়ার্ড</label>
+                <form id="registerForm">
 
-                <div class="password-box">
+
+                    <!-- Name -->
+
+                    <label for="name">
+                        পূর্ণ নাম
+                    </label>
 
                     <input
-                        id="password"
+                        id="name"
+                        type="text"
+                        placeholder="আপনার নাম"
+                        required>
+
+
+                    <!-- Age -->
+
+                    <label for="age">
+                        বয়স
+                    </label>
+
+                    <input
+                        id="age"
+                        type="number"
+                        placeholder="আপনার বয়স"
+                        min="5"
+                        max="100"
+                        required>
+
+
+                    <!-- Email -->
+
+                    <label for="email">
+                        ইমেইল
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="example@gmail.com"
+                        required>
+
+
+                    <!-- Password -->
+
+                    <label for="password">
+                        পাসওয়ার্ড
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            id="password"
+                            type="password"
+                            placeholder="********"
+                            required>
+
+                        <i
+                            id="togglePassword"
+                            class="fa-solid fa-eye">
+                        </i>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <label for="confirmPassword">
+                        পাসওয়ার্ড নিশ্চিত করুন
+                    </label>
+
+                    <input
+                        id="confirmPassword"
                         type="password"
                         placeholder="********"
                         required>
 
-                    <i
-                        id="togglePassword"
-                        class="fa-solid fa-eye"></i>
 
-                </div>
+                    <!-- Book Categories -->
 
-                <!-- Confirm Password -->
+                    <label>
+                        আপনি কোন ধরনের বই পড়তে পছন্দ করেন?
+                    </label>
 
-                <label>পাসওয়ার্ড নিশ্চিত করুন</label>
 
-                <input
-                    id="confirmPassword"
-                    type="password"
-                    placeholder="********"
-                    required>
+                    <div class="book-categories">
 
-                <!-- Button -->
 
-                <button type="submit">
+                        <!-- Novel -->
 
-                    অ্যাকাউন্ট তৈরি করুন
+                        <label class="category-option">
 
-                </button>
+                            <input
+                                type="checkbox"
+                                name="categories"
+                                value="novel">
 
-            </form>
+                            <span>
+                                📖 উপন্যাস
+                            </span>
 
-            <p class="login-link">
+                        </label>
 
-                আগে থেকেই অ্যাকাউন্ট আছে?
 
-                <a href="login.html">
+                        <!-- Education -->
 
-                    লগইন করুন
+                        <label class="category-option">
 
-                </a>
+                            <input
+                                type="checkbox"
+                                name="categories"
+                                value="education">
 
-            </p>
+                            <span>
+                                🎓 শিক্ষা
+                            </span>
+
+                        </label>
+
+
+                        <!-- Programming -->
+
+                        <label class="category-option">
+
+                            <input
+                                type="checkbox"
+                                name="categories"
+                                value="programming">
+
+                            <span>
+                                💻 প্রোগ্রামিং
+                            </span>
+
+                        </label>
+
+
+                        <!-- Science -->
+
+                        <label class="category-option">
+
+                            <input
+                                type="checkbox"
+                                name="categories"
+                                value="science">
+
+                            <span>
+                                🔬 বিজ্ঞান
+                            </span>
+
+                        </label>
+
+
+                        <!-- History -->
+
+                        <label class="category-option">
+
+                            <input
+                                type="checkbox"
+                                name="categories"
+                                value="history">
+
+                            <span>
+                                📜 ইতিহাস
+                            </span>
+
+                        </label>
+
+
+                        <!-- Fiction -->
+
+                        <label class="category-option">
+
+                            <input
+                                type="checkbox"
+                                name="categories"
+                                value="fiction">
+
+                            <span>
+                                ✨ গল্প / ফিকশন
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+
+                    <button type="submit">
+
+                        অ্যাকাউন্ট তৈরি করুন
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- Login -->
+
+                <p class="login-link">
+
+                    আগে থেকেই অ্যাকাউন্ট আছে?
+
+                    <a href="login.html">
+                        লগইন করুন
+                    </a>
+
+                </p>
+
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
 
-<script src="assets/js/register.js"></script>
+    <!-- JavaScript -->
+
+    <script>
+
+        // Password Show / Hide
+
+        const password = document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+
+        togglePassword.addEventListener("click", function () {
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                this.classList.remove("fa-eye");
+
+                this.classList.add("fa-eye-slash");
+
+            } else {
+
+                password.type = "password";
+
+                this.classList.remove("fa-eye-slash");
+
+                this.classList.add("fa-eye");
+
+            }
+
+        });
+
+
+        // Form Submit
+
+        const registerForm =
+            document.getElementById("registerForm");
+
+
+        registerForm.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+
+            // Password
+
+            const passwordValue =
+                document.getElementById("password").value;
+
+
+            // Confirm Password
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+
+            // Check Password
+
+            if (passwordValue !== confirmPassword) {
+
+                alert("পাসওয়ার্ড দুটি একই নয়!");
+
+                return;
+
+            }
+
+
+            // Get Selected Categories
+
+            const selectedCategories =
+                document.querySelectorAll(
+                    'input[name="categories"]:checked'
+                );
+
+
+            // Category Required
+
+            if (selectedCategories.length === 0) {
+
+                alert("কমপক্ষে একটি বইয়ের ক্যাটাগরি নির্বাচন করুন!");
+
+                return;
+
+            }
+
+
+            // Convert Categories to Array
+
+            const categories =
+                Array.from(selectedCategories).map(
+                    category => category.value
+                );
+
+
+            console.log("Selected Categories:", categories);
+
+
+            alert("রেজিস্ট্রেশন সফল হয়েছে!");
+
+        });
+
+    </script>
+
 
 </body>
 
